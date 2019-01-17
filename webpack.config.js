@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const isProduction = process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production'
 
@@ -97,6 +98,9 @@ const config = {
         // publicPath: '/static/'
     },
     optimization: {
+        splitChunks: {
+            chunks: 'all'
+        },
         minimizer: [
             new UglifyJsPlugin({
                 cache: true,
@@ -115,6 +119,7 @@ if (isProduction) {
 } else {
     config.plugins.push(new webpack.HotModuleReplacementPlugin())
     config.plugins.push(new CleanWebpackPlugin(['dist']))
+    config.plugins.push(new BundleAnalyzerPlugin())
 }
 
 module.exports = config
