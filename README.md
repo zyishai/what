@@ -1,5 +1,9 @@
 # learn-list
 ## Overview
 Maintain list of foreign words that I met and don't know yet..
-## Technology
-- 
+## Technologies
+- **React** <small>(react & react-dom)</small> - Front end UI library. Used to add virtual dom, state binding and component architecture.
+- **Mobx** <small>(mobx, mobx-react, mobx-react-devtools & mobx-utils)</small> - Advanced state management library. Observe changed to variables and update observers accordingly.
+- **Webpack** <small>(webpack, webpack-cli & webpack-dev-server)</small> - Bundling tool. Used to grab all assets in a project (html, js, css, images etc), transporm them (transpilation, minification, uglification etc) and bundle them for easy deployment.
+- **Tape** <small>(tape, tape-async, babel-tape-runner)</small> - Test runner for testing app's model. Also, support async-await syntax via `tape-async` plugin (and has more plugins).
+- **Jest** <small>(jest, jest-babel)</small> - Testing library for React which support UI testing via snapshots.
