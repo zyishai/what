@@ -1,5 +1,7 @@
 # learn-list
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/110ef092-5a38-465d-ae5f-b7afc2e5cd2e/deploy-status)](https://app.netlify.com/sites/vocalist/deploys)
+
 ## Overview
 
 Maintain list of foreign words that I met and don't know yet..
