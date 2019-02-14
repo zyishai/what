@@ -1,10 +1,10 @@
-# learn-list
+# What
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/110ef092-5a38-465d-ae5f-b7afc2e5cd2e/deploy-status)](https://app.netlify.com/sites/vocalist/deploys)
 
 ## Overview
 
-Maintain list of foreign words that I met and don't know yet..
+Maintain list of things that I did in resolution of month and year.
 
 ## Technologies
 
