@@ -14,10 +14,14 @@ Maintain list of things that I did in resolution of month and year.
 -   **Tape** <small>(tape, tape-async, babel-tape-runner)</small> - Test runner for testing app's model. Also, support async-await syntax via `tape-async` plugin (and has more plugins).
 -   **Jest** <small>(jest, jest-babel)</small> - Testing library for React which support UI testing via snapshots.
 
-## Styling
+## Code Styling
 
 ## These are the tools that I'm using in order to enforce coding style in my project:
 
 -   **.editorconfig** - Used to set default editor configurations (encoding, indentation etc).
 -   **Eslint** <small>(eslint)</small> - Linter, used to alert when coding style is not correct or there are syntax errors.
 -   **Prettier** <small>(prettier)</small> - Used to enforce styling rules, also auto correct coding style on save.
+
+## Style
+
+-   **Rebass** - Tiny react components, using styled-components.

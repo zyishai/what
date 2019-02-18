@@ -73,9 +73,6 @@ const config = {
 		new MiniCssExtractPlugin({
 			filename: isProduction ? '[name].[hash].css' : '[name].css',
 			chunkFilename: isProduction ? '[id].[hash].css' : ''
-		}),
-		new Dotenv({
-			path: path.join(__dirname, '.env')
 		})
 	],
 	resolve: {
@@ -115,6 +112,11 @@ if (isProduction) {
 	config.plugins.push(
 		new CompressionPlugin({
 			cache: true
+		})
+	)
+	config.plugins.push(
+		new Dotenv({
+			path: path.join(__dirname, '.env')
 		})
 	)
 } else {
