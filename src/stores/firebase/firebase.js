@@ -1,6 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/database'
-import { observable, action, computed } from 'mobx'
+import { observable, action } from 'mobx'
 
 const config = {
 	apiKey: process.env.FIREBASE_API_KEY,

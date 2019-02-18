@@ -4,6 +4,12 @@ import { Flex, Card } from 'rebass'
 import { toMonth } from 'number-to-date-month-name'
 import { withFirebase } from '../../hoc'
 
+const hoverNotSelected = {
+	'&:hover': {
+		backgroundColor: 'lightgray'
+	}
+}
+
 const Badge = props => (
 	<Card
 		color={props.selected ? 'white' : 'black'}
@@ -19,13 +25,7 @@ const Badge = props => (
 					cursor: 'pointer'
 				}
 			},
-			!props.selected
-				? {
-					'&:hover': {
-						backgroundColor: 'lightgray'
-					}
-				  }
-				: null
+			!props.selected ? hoverNotSelected : null
 		]}
 	/>
 )
