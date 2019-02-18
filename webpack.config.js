@@ -8,13 +8,14 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin
+const Dotenv = require('dotenv-webpack')
 
 const isProduction =
 	process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production'
 
 const config = {
 	entry: {
-		main: path.resolve(__dirname, 'index.js')
+		main: path.resolve(__dirname, 'src', 'index.js')
 	},
 	output: {
 		filename: '[name].[hash].js',
@@ -55,14 +56,7 @@ const config = {
 			{
 				test: /\.css$/,
 				use: [
-					isProduction
-						? MiniCssExtractPlugin.loader
-						: {
-								loader: 'style-loader/url',
-								options: {
-									convertToAbsoluteUrls: true
-								}
-						  },
+					MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
 						options: {
@@ -79,6 +73,9 @@ const config = {
 		new MiniCssExtractPlugin({
 			filename: isProduction ? '[name].[hash].css' : '[name].css',
 			chunkFilename: isProduction ? '[id].[hash].css' : ''
+		}),
+		new Dotenv({
+			path: path.join(__dirname, '.env')
 		})
 	],
 	resolve: {
